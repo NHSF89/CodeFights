@@ -1,0 +1,22 @@
+/*
+matrixElementsSum
+https://codefights.com/arcade/intro/level-2/xskq4ZxLyqQMCLshr
+*/
+
+int matrixElementsSum(std::vector<std::vector<int>> matrix) {
+
+    int total;
+    
+    for (int i = 0; i < matrix[0].size(); i++)
+    {    
+        for (int j = 0; j < matrix.size(); j++)
+        {    
+            if(matrix[j][i]!=0)
+                total+= matrix[j][i];
+            else
+                break;
+            }
+        }
+    
+    return(total);
+}
