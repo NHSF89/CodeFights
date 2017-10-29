@@ -1,0 +1,20 @@
+/*
+checkPalindrome
+https://codefights.com/arcade/intro/level-1/s5PbmwxfECC52PWyQ
+*/
+
+bool checkPalindrome(std::string inputString) {
+    
+    int length = inputString.length()-1; //string length without null
+    string reverseString = inputString;
+    
+    reverse(reverseString.begin(),reverseString.end());
+    
+    for (int i=0; i < length; i++)
+    {
+        if ( inputString[i] != reverseString[i])
+            return(false);
+    }
+    
+    return (true);
+}
