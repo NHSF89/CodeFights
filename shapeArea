@@ -1,0 +1,8 @@
+/*
+shapeArea
+https://codefights.com/arcade/intro/level-2/yuGuHvcCaFCKk56rJ
+*/
+
+int shapeArea(int n) { 
+ return (1+2*n*(n-1));
+}
