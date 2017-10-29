@@ -1,0 +1,26 @@
+/*
+adjacentElementsProduct
+https://codefights.com/arcade/intro/level-2/xzKiBHjhoinnpdh6m
+*/
+
+int adjacentElementsProduct(std::vector<int> inputArray) {
+    
+    int high = -1000, temp, temp2;
+    
+    if (inputArray.size()<= 2)
+        return(inputArray[0] * inputArray[1]);
+    
+    for (int i = 1; i < inputArray.size()-1; i++)
+    {
+        
+        temp = inputArray[i] * inputArray[i-1];
+        temp2 = inputArray[i] * inputArray[i+1];
+        
+        if (temp > high)
+            high = temp;
+        if ( temp2 > high)
+            high = temp2;
+    }
+    
+    return (high);
+}
