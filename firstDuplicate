@@ -4,14 +4,13 @@ https://codefights.com/interview-practice/task/pMvymcahZ8dY4g75q
 */
 
 int firstDuplicate(std::vector<int> array) {
-    
-    for(int i  0; i < array.size(); i++){
+    for(int i =0; i < array.size(); i++){
         int j = abs(array[i]);
         
         if(array[j - 1] < 0)
             return j;
         
-        array[j - 1] = - array[j - 1];
+        array[j - 1] = - array[j- 1];
     }
     return -1;
 }
