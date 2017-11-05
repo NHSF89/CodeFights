@@ -1,0 +1,17 @@
+/*
+firstDuplicate
+https://codefights.com/interview-practice/task/pMvymcahZ8dY4g75q
+*/
+
+int firstDuplicate(std::vector<int> a) {
+    
+    for(int i  0; i < a.size(); i++){
+        int j = abs(a[i]);
+        
+        if(a[j - 1] < 0)
+            return j;
+        
+        a[j - 1] = - a[j - 1];
+    }
+    return -1;
+}
